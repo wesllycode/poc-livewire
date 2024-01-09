@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Livewire\Counter;
 use App\Livewire\CreatePost;
 use Illuminate\Support\Facades\Route;
@@ -21,3 +22,5 @@ Route::get('/', function () {
 
 Route::get('/counter',Counter::class);
 Route::get('/posts', CreatePost::class);
+
+Route::get('/post/create',[PostController::class,'create'])->name('post.create');
